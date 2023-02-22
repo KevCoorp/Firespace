@@ -13,4 +13,4 @@
 
 :warning: - Actuellement le jeu est en phase de développement. Cela signifie que des ajouts sont prévues merci de votre compréhension. 
 
-kCorp's® 2023
+kCorp® 2023
