@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Textures/background.png" type="Texture" id=2]
+
+[node name="Gameplay" type="Node2D"]
+
+[node name="Background" type="Sprite" parent="."]
+scale = Vector2( 1.75781, 2.35156 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 223, 329 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 147.0
+margin_top = 2.0
+margin_right = 540.0
+margin_bottom = 42.0
+text = "Version de développment
+		0.8.fs_dev.2023
+"
