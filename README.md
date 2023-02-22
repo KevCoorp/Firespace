@@ -7,11 +7,10 @@
 - Godot Engine (Moteur de jeu)
 - Paint.NET (Sprites, Background,...)
 
-:wrench: - Configuration requis
+:wrench: - Configuration requise
 
-La liste de la configuration matériel sera disponnible dès lors que la première version publique serra disponible 
+- Un ordinateur sous Windows ou Linux
 
-
-:warning: - Le jeu reprend le projet original abadonnée du jeu d'origine (utilisant le language Python). Le développement du jeu peut prendre quelques temps selon, le temps et l'envie. Des mises à jours serront prévus à la sortie du jeu. 
+:warning: - Actuellement le jeu est en phase de développement. Cela signifie que des ajouts sont prévues merci de votre compréhension. 
 
 kCorp's® 2023
