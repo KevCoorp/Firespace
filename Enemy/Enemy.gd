@@ -3,6 +3,8 @@ extends Area2D
 export var verticalSpeed := 10
 export var health: int = 5
 
+var plBullet := preload("res://Bullet/EnemyBullet.tscn")
+
 var playerInArea: Player = null
 
 func _process(delta):
@@ -11,6 +13,11 @@ func _process(delta):
 
 func _physics_process(delta):
 	position.y += verticalSpeed * delta
+	
+func fire():
+	var bullet := plBullet.instance()
+	bullet.position = position
+	get_tree().current_scene.add_child(bullet)
 
 func damage(amount: int):
 	health -= amount

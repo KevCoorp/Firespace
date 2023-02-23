@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/background.png" type="Texture" id=2]
 [ext_resource path="res://Enemy/FastEnemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Enemy/SlowShooter.tscn" type="PackedScene" id=6]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -21,4 +23,11 @@ centered = false
 position = Vector2( 226, 472 )
 
 [node name="FastEnemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 181, 225 )
+position = Vector2( 108, 4 )
+
+[node name="Enemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 353, 10 )
+
+[node name="SlowShooter" parent="." instance=ExtResource( 6 )]
+position = Vector2( 219, 6 )
+fireRate = 2
