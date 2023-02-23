@@ -44,7 +44,7 @@ func _physics_process(delta):
 	position.y = clamp(position.y, 0, viewRect.size.y)
 
 func damage(amount: int):
-	if invincibilityTimer.is_stopped():
+	if !invincibilityTimer.is_stopped():
 		return
 			
 	invincibilityTimer.start(damageInvincibilityTime)

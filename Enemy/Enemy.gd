@@ -1,9 +1,12 @@
 extends Area2D
+class_name Enemy
 
 export var minSpeed: float = 10
 export var maxSpeed: float = 20
 
 export var life: int = 5
+
+var plBullet := preload("res://Bullet/EnemyBullet.tscn")
 
 var speed: float = 0
 
@@ -18,6 +21,11 @@ func _ready():
 
 func _physics_process(delta):
 	position.y += speed * delta
+	
+func fire():
+		var bullet := plBullet.instance()
+		bullet.position = position
+		get_tree().current_scene.add_child(bullet)
 
 func damage(amount: int):
 	life -= amount 
