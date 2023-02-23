@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/background.png" type="Texture" id=2]
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemy/FastEnemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Enemy/SlowShooter.tscn" type="PackedScene" id=5]
 
 [node name="Gameplay" type="Node2D"]
 
@@ -14,15 +13,12 @@ z_index = -100
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 226, 490 )
-
-[node name="Enemy" parent="." instance=ExtResource( 3 )]
-position = Vector2( 135, 96 )
-
-[node name="SlowShooter" parent="." instance=ExtResource( 5 )]
-position = Vector2( 307, 320 )
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 226, 472 )
+
+[node name="FastEnemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 181, 225 )
