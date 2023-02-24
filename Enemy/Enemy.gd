@@ -20,8 +20,14 @@ func fire():
 	get_tree().current_scene.add_child(bullet)
 
 func damage(amount: int):
+	if health <= 0:
+		return
+	
 	health -= amount
 	if health <= 0:
+	
+		Signals.emit_signal("on_score_increment", 1)	
+		
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():

@@ -53,6 +53,9 @@ func damage(amount: int):
 	life -= amount
 	print("Player Life = %s" % life)
 	
+	var cam := get_tree().current_scene.find_node("Cam", true, false)
+	cam.shake(20)
+		
 	if life <= 0:
 		print("Game Over")
 		queue_free()

@@ -1,10 +1,11 @@
 extends Node2D
 
-const MIN_SPAWN_TIME = 1.5
+const MIN_SPAWN_TIME = 4
 
 var preloadedEnemies := [
 	preload("res://Enemy/FastEnemy.tscn"),
 	preload("res://Enemy/SlowShooter.tscn"),
+	preload("res://Enemy/Enemy.tscn"),
 ]
 
 onready var spawnTimer := $SpawnTimer
