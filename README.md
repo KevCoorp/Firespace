@@ -9,7 +9,7 @@
 
 :wrench: - Configuration requise
 
-- Un ordinateur sous Windows ou Linux
+- Un ordinateur sous Windows ou Linux (x64)
 
 :warning: - Actuellement le jeu est en phase de développement. Cela signifie que des ajouts sont prévues merci de votre compréhension. 
 
