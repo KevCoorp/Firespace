@@ -1,4 +1,5 @@
 extends Area2D
+class_name Enemy
 
 export var verticalSpeed := 10
 export var health: int = 5
@@ -32,7 +33,6 @@ func damage(amount: int):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
-
 
 func _on_Enemy_area_entered(area):
 	if area is Player:

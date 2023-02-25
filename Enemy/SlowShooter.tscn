@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Textures/enemy_3.png" type="Texture" id=2]
+[ext_resource path="res://Textures/ennemy_3.png" type="Texture" id=2]
 [ext_resource path="res://Enemy/SlowShooter.gd" type="Script" id=3]
 
 [node name="SlowShooter" instance=ExtResource( 1 )]
