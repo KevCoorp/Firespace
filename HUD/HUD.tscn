@@ -19,3 +19,4 @@ margin_bottom = 16.0
 text = "Score
 0"
 align = 1
+clip_text = true

@@ -9,6 +9,6 @@ func _ready():
 	
 func _on_score_increment(amount: int):
 	score += amount
-	scoreLabel.text = str(score)
+	scoreLabel.text = "Score %s" % [ score ]
 	
 	

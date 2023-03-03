@@ -8,4 +8,6 @@ func _process(delta):
 	if fireTimer.is_stopped():
 		fire()
 		fireTimer.start(fireRate)
+	
+	
 
