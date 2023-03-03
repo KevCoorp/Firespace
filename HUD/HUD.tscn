@@ -16,7 +16,6 @@ margin_left = -20.0
 margin_top = -15.0
 margin_right = 429.0
 margin_bottom = 16.0
-text = "Score
-0"
+text = "Score 0"
 align = 1
 clip_text = true
