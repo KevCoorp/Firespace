@@ -11,6 +11,6 @@
 
 - Un ordinateur sous Windows ou Linux (x64)
 
-:warning: - Actuellement le jeu est en phase de développement. Cela signifie que des ajouts sont prévues merci de votre compréhension. 
+:warning: - Le jeu est en évolution tout soutien est la bienvenue ! 
 
 kCorp® 2023
