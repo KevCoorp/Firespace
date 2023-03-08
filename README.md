@@ -1,6 +1,6 @@
 # :rocket:FireSpace
 
-:rocket: - FireSpace est un projet de jeu-vidéo shoot 'em up se basant sur FireAqua. L'objectif du jeu est de détruire des vaisseaux spatiales ennemis ayant pour figure les principaux développeurs de FireAqua. 
+:rocket: - FireSpace est un jeu-vidéo shoot'em up en 2D. L'objectif est de tirer sur une vague de vaisseau. 
 
 :gear: - Les outils utiliser lors du développement de ce jeu sont:
 
