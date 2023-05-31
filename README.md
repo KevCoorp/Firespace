@@ -1,6 +1,6 @@
 # :rocket:FireSpace
 
-:rocket: - FireSpace est un jeu-vidéo shoot'em up en 2D. L'objectif est de tirer sur une vague de vaisseau. 
+:rocket: - FireSpace est un mini-jeu de shoot'em up en 2D réalisée en l'espace d'une semaine. 
 
 :gear: - Les outils utiliser lors du développement de ce jeu sont:
 
@@ -9,8 +9,7 @@
 
 :wrench: - Configuration requise
 
-- Un ordinateur sous Windows ou Linux (x64)
-
-:warning: - Le jeu est en évolution tout soutien est la bienvenue ! 
+- Un ordinateur sous Windows ou Linux 
+- Uniquement en version 64
 
 kCorp® 2023
