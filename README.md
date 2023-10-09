@@ -12,4 +12,4 @@
 - Un ordinateur sous Windows ou Linux 
 - Uniquement en version 64
 
-kCorp® 2023
+kevCorp® 2023
