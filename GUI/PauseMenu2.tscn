@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Textures/background.png" type="Texture" id=1]
 [ext_resource path="res://GUI/PauseMenu2.gd" type="Script" id=2]
+[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 3 )
 
 [node name="PauseMenu2" type="Control"]
 pause_mode = 2
@@ -20,21 +27,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 186.0
-margin_top = 278.0
-margin_right = 264.0
-margin_bottom = 322.0
+margin_left = 183.0
+margin_top = 273.0
+margin_right = 266.0
+margin_bottom = 327.0
 
 [node name="ResumeBtn" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_right = 78.0
-margin_bottom = 20.0
+margin_right = 83.0
+margin_bottom = 25.0
+custom_fonts/font = SubResource( 1 )
 text = "Reprendre"
 icon_align = 1
 
 [node name="QuitBtn" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 24.0
-margin_right = 78.0
-margin_bottom = 44.0
+margin_top = 29.0
+margin_right = 83.0
+margin_bottom = 54.0
+custom_fonts/font = SubResource( 2 )
 text = "Quitter"
 icon_align = 1
 

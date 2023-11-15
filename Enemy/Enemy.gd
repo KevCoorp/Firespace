@@ -4,7 +4,7 @@ class_name Enemy
 export var verticalSpeed := 10
 export var health: int = 5
 
-var plBullet := preload("res://Bullet/EnemyBullet.tscn")
+var plBullet := preload("res://Bullet/PinkEnemyBullet.tscn")
 
 var playerInArea: Player = null
 
