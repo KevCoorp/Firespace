@@ -1,6 +1,6 @@
 # :rocket:FireSpace
 
-:rocket: - FireSpace est un mini-jeu de shoot'em up en 2D réalisée en l'espace d'une semaine. 
+:rocket: - FireSpace est un mini-jeu de shoot'em up dans l'espace.  
 
 :gear: - Les outils utiliser lors du développement de ce jeu sont:
 
