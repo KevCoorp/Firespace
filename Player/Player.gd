@@ -53,11 +53,11 @@ func damage(amount: int):
 	life -= amount
 	print("Player Life = %s" % life)
 	
-	var cam := get_tree().current_scene.find_node("Cam", true, false)
-	cam.shake(20)
+	var camera := get_tree().current_scene.find_node("Camera", true, false)
+	camera.shake(10)
 		
 	if life <= 0:
-		print("Game Over")
+		get_tree().change_scene("res://MainScenes/GameOver.tscn")
 		queue_free()
 
 func _on_InvincibilityTimer_timeout():
