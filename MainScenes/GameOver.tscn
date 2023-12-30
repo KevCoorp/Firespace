@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Textures/background.png" type="Texture" id=2]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
@@ -10,15 +11,22 @@ font_data = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 224.5, 299.5 )
+scale = Vector2( 1.76172, 2.34766 )
+texture = ExtResource( 2 )
+
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
+rect_pivot_offset = Vector2( 203, 345 )
+color = Color( 0, 0, 0, 0.298039 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 146.0
 margin_top = 265.0
 margin_right = 304.0
 margin_bottom = 303.0
+rect_pivot_offset = Vector2( 27, 58 )
 custom_fonts/font = SubResource( 1 )
 text = "Game Over"

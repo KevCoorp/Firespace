@@ -11,4 +11,5 @@ func _on_score_increment(amount: int):
 	score += amount
 	scoreLabel.text = "Score %s" % [ score ]
 	
+
 	
