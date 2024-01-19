@@ -7,6 +7,7 @@
 [node name="SlowShooter" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
 verticalSpeed = 30
+health = 5
 fireRate = 2.5
 
 [node name="Sprite" parent="." index="0"]

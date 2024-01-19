@@ -9,9 +9,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 func _on_Bullet_area_entered(area):
-	var camera := get_tree().current_scene.find_node("Camera", true, false)
-	camera.shake(0.5)
+	var cam := get_tree().current_scene.find_node("Cam", true, false)
+	
 	
 	if area.is_in_group("damageable"):
-		area.damage(0.5)
+		area.damage(1)
 		queue_free()
