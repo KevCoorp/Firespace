@@ -29,7 +29,7 @@ _global_script_class_icons={
 config/name="FireSpace"
 run/main_scene="res://MainScenes/Gameplay.tscn"
 boot_splash/image="res://Splash/boot.png"
-config/icon="res://icon.png"
+config/icon="res://Textures/icon256.png"
 
 [autoload]
 
