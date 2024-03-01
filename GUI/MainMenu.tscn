@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Textures/background.png" type="Texture" id=1]
-[ext_resource path="res://GUI/PauseMenu2.gd" type="Script" id=2]
+[ext_resource path="res://GUI/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Fonts/Roboto-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Textures/ship.png" type="Texture" id=4]
 
@@ -61,7 +61,7 @@ margin_top = 273.0
 margin_right = 273.0
 margin_bottom = 327.0
 
-[node name="ResumeBtn" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="StartBtn" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_right = 97.0
 margin_bottom = 25.0
 custom_fonts/font = SubResource( 1 )
@@ -76,5 +76,5 @@ custom_fonts/font = SubResource( 2 )
 text = "Quitter"
 icon_align = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/StartBtn" to="." method="_on_StartBtn_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]
