@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Textures/background.png" type="Texture" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=5]
 [ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
 [ext_resource path="res://MainScenes/Main.gd" type="Script" id=7]
+[ext_resource path="res://Audio/theme.ogg" type="AudioStream" id=8]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource( 7 )
@@ -42,6 +43,10 @@ script = ExtResource( 5 )
 
 [node name="DifficultyTimer" type="Timer" parent="."]
 wait_time = 10.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
 
 [connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="DifficultyTimer" to="." method="_on_DifficultyTimer_timeout"]
