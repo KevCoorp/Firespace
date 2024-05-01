@@ -14,7 +14,8 @@ font_data = SubResource( 3 )
 
 [sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.152941, 0.133333, 0.415686, 1 )
-corner_radius_top_left = 6
+border_width_bottom = 2
+border_color = Color( 0.0156863, 0.0313726, 0.141176, 1 )
 
 [sub_resource type="Theme" id=6]
 Button/colors/font_color = Color( 1, 1, 1, 1 )
@@ -65,22 +66,22 @@ margin_bottom = 2.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 189.0
-margin_top = 276.0
+margin_top = 275.0
 margin_right = 260.0
-margin_bottom = 324.0
+margin_bottom = 325.0
 
 [node name="ResumeBtn" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_right = 71.0
-margin_bottom = 19.0
+margin_bottom = 21.0
 theme = SubResource( 6 )
 custom_fonts/font = SubResource( 1 )
 text = "Reprendre"
 icon_align = 1
 
 [node name="QuitBtn" type="Button" parent="CenterContainer/VBoxContainer"]
-margin_top = 23.0
+margin_top = 25.0
 margin_right = 71.0
-margin_bottom = 48.0
+margin_bottom = 50.0
 custom_fonts/font = SubResource( 2 )
 text = "Quitter"
 icon_align = 1
