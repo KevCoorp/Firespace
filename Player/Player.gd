@@ -1,18 +1,22 @@
 extends Area2D
 class_name Player
 
+
+# Variable
 var plBullet := preload("res://Bullet/Bullet.tscn")
-
-onready var fireDelayTimer := $FireDelayTimer
-onready var invincibilityTimer := $InvincibilityTimer
-onready var shieldSprite := $Shield
-
-export var life: int = 3
-
-export var speed: float = 100
-export var fireDelay: float = 0.1
-export var damageInvincibilityTime := 0.5
 var vel := Vector2(0, 0)
+
+onready var fireDelayTimer := $FireDelayTimer # Délai de tir
+onready var invincibilityTimer := $InvincibilityTimer # Timer invicilibité
+onready var shieldSprite := $Shield # Bouclier
+
+# Export 
+export var life: int = 3 # Vie
+export var speed: float = 100 # Vitesse
+export var fireDelay: float = 0.1 # Délai de tir
+export var damageInvincibilityTime := 0.5 # Domage du temps de l'invicibilité 
+
+
 
 func _ready():
 	shieldSprite.visible = false
@@ -24,9 +28,10 @@ func _process(delta):
 		bullet.position = position
 		get_tree().current_scene.add_child(bullet)
 	
+
+# Déplaçement du vaisseau
 func _physics_process(delta):
 	var dirVec := Vector2 (0, 0)
-	
 	if Input.is_action_pressed("move_left"):
 		dirVec.x = -1 
 	elif Input.is_action_pressed("move_right"):
@@ -36,6 +41,9 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("move_down"):
 		dirVec.y = 1 
 		
+
+	
+
 	vel = dirVec.normalized() * speed
 	position += vel * delta
 	
@@ -43,6 +51,8 @@ func _physics_process(delta):
 	position.x = clamp(position.x, 0, viewRect.size.x)
 	position.y = clamp(position.y, 0, viewRect.size.y)
 
+
+# Si le joueur est touché
 func damage(amount: int):
 	if !invincibilityTimer.is_stopped():
 		return
