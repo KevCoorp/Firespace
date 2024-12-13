@@ -6,15 +6,15 @@ class_name Player
 var plBullet := preload("res://Bullet/Bullet.tscn")
 var vel := Vector2(0, 0)
 
-onready var fireDelayTimer := $FireDelayTimer # Délai de tir
-onready var invincibilityTimer := $InvincibilityTimer # Timer invicilibité
-onready var shieldSprite := $Shield # Bouclier
+@onready var fireDelayTimer := $FireDelayTimer # Délai de tir
+@onready var invincibilityTimer := $InvincibilityTimer # Timer invicilibité
+@onready var shieldSprite := $Shield # Bouclier
 
 # Export 
-export var life: int = 3 # Vie
-export var speed: float = 100 # Vitesse
-export var fireDelay: float = 0.1 # Délai de tir
-export var damageInvincibilityTime := 0.5 # Domage du temps de l'invicibilité 
+@export var life: int = 3 # Vie
+@export var speed: float = 100 # Vitesse
+@export var fireDelay: float = 0.1 # Délai de tir
+@export var damageInvincibilityTime := 0.5 # Domage du temps de l'invicibilité 
 
 
 
@@ -24,7 +24,7 @@ func _ready():
 func _process(delta):
 	if Input.is_action_pressed("shoot") and fireDelayTimer.is_stopped():
 		fireDelayTimer.start(fireDelay)
-		var bullet := plBullet.instance()
+		var bullet := plBullet.instantiate()
 		bullet.position = position
 		get_tree().current_scene.add_child(bullet)
 	
@@ -63,11 +63,11 @@ func damage(amount: int):
 	life -= amount
 	print("Player Life = %s" % life)
 	
-	var camera := get_tree().current_scene.find_node("Camera", true, false)
+	var camera := get_tree().current_scene.find_child("Camera3D", true, false)
 	camera.shake(10)
 		
 	if life <= 0:
-		get_tree().change_scene("res://MainScenes/GameOver.tscn")
+		get_tree().change_scene_to_file("res://MainScenes/GameOver.tscn")
 		queue_free()
 
 func _on_InvincibilityTimer_timeout():

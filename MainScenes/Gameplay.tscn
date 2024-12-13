@@ -1,51 +1,50 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://cw67g6hd1vsn1"]
 
-[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Textures/background.png" type="Texture" id=2]
-[ext_resource path="res://Enemy/Spawner.gd" type="Script" id=3]
-[ext_resource path="res://HUD/HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Camera/Camera.gd" type="Script" id=5]
-[ext_resource path="res://GUI/GUI.tscn" type="PackedScene" id=6]
-[ext_resource path="res://MainScenes/Main.gd" type="Script" id=7]
-[ext_resource path="res://Audio/theme.ogg" type="AudioStream" id=8]
+[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2"]
+[ext_resource type="Script" path="res://Enemy/Spawner.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://2saq6ysd1tq" path="res://HUD/HUD.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://GUI/GUI.tscn" id="6"]
+[ext_resource type="Script" path="res://MainScenes/Main.gd" id="7"]
+[ext_resource type="AudioStream" uid="uid://cb04rlo8ljxag" path="res://Audio/theme.ogg" id="8"]
 
 [node name="Gameplay" type="Node2D"]
-script = ExtResource( 7 )
+script = ExtResource("7")
 
-[node name="Background" type="Sprite" parent="."]
-scale = Vector2( 1.75781, 2.35156 )
+[node name="Background" type="Sprite2D" parent="."]
 z_index = -100
-texture = ExtResource( 2 )
+scale = Vector2(1.75781, 2.53125)
+texture = ExtResource("2")
 centered = false
 
-[node name="GUI" parent="." instance=ExtResource( 6 )]
+[node name="GUI" parent="." instance=ExtResource("6")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="CanvasLayer" instance=ExtResource( 4 )]
-margin_left = -225.0
-margin_right = 225.0
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("4")]
+layout_mode = 3
+anchors_preset = 5
+offset_left = -225.0
+offset_right = 225.0
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 226, 472 )
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(226, 472)
 
 [node name="Spawner" type="Node2D" parent="."]
-position = Vector2( 216, -65 )
-script = ExtResource( 3 )
+position = Vector2(216, -65)
+script = ExtResource("3")
 
 [node name="SpawnTimer" type="Timer" parent="Spawner"]
 one_shot = true
 
-[node name="Camera" type="Camera2D" parent="."]
+[node name="Camera3D" type="Camera2D" parent="."]
 anchor_mode = 0
-current = true
-script = ExtResource( 5 )
 
 [node name="DifficultyTimer" type="Timer" parent="."]
 wait_time = 10.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource("8")
 
 [connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="DifficultyTimer" to="." method="_on_DifficultyTimer_timeout"]

@@ -1,8 +1,8 @@
 extends Area2D
 class_name Enemy
 
-export var verticalSpeed := 10
-export var health: int = 5
+@export var verticalSpeed := 10
+@export var health: int = 5
 
 var plBullet := preload("res://Bullet/EnemyBullet.tscn")
 
@@ -16,7 +16,7 @@ func _physics_process(delta):
 	position.y += verticalSpeed * delta
 	
 func fire():
-	var bullet := plBullet.instance()
+	var bullet := plBullet.instantiate()
 	bullet.position = position
 	get_tree().current_scene.add_child(bullet)
 
