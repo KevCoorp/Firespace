@@ -5,7 +5,6 @@ class_name Enemy
 @export var health: int = 5
 
 var plBullet := preload("res://Bullet/EnemyBullet.tscn")
-
 var playerInArea: Player = null
 
 func _process(delta):
@@ -28,7 +27,6 @@ func damage(amount: int):
 	if health <= 0:
 	
 		Signals.emit_signal("on_score_increment", 1)	
-		
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():

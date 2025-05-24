@@ -1,0 +1,13 @@
+res://default_env.tres
+res://GUI/PauseMenu2.tscn
+res://GUI/buttonTexture.tres
+res://MainScenes/Gameplay.tscn
+res://HUD/HUD.tscn
+res://MainScenes/GameOver.tscn
+res://HUD/HUD.gd
+res://GUI/PauseMenu2.gd
+res://Player/Player.gd
+res://Enemy/Enemy.gd
+res://Bullet/EnemyBullet.gd
+res://Scripts/game_over.gd
+res://Bullet/Bullet.gd

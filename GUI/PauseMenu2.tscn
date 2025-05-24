@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bcqg7w13ok1qv"]
 
-[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://background.png" id="1"]
 [ext_resource type="Script" uid="uid://dmxs4ghpm5xno" path="res://GUI/PauseMenu2.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2_wv0hp"]
 [ext_resource type="FontFile" uid="uid://f85s4nj3ln3i" path="res://Fonts/Roboto-Regular.ttf" id="3"]
 [ext_resource type="Theme" uid="uid://bc3xxe37krm33" path="res://GUI/buttonTexture.tres" id="4_wv0hp"]
 [ext_resource type="Texture2D" uid="uid://g61k0xdd7a4v" path="res://Textures/logo.png" id="5_wv0hp"]
@@ -41,7 +41,7 @@ script = ExtResource("2")
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -100
 scale = Vector2(1.75781, 2.53516)
-texture = ExtResource("1")
+texture = ExtResource("2_wv0hp")
 centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

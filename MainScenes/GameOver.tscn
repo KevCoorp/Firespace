@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://f85s4nj3ln3i" path="res://Fonts/Roboto-Regular.ttf" id="1"]
 [ext_resource type="Script" uid="uid://bdfricwqgu1vf" path="res://Scripts/game_over.gd" id="1_amhxk"]
-[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://background.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2_csy5u"]
 [ext_resource type="Theme" uid="uid://bc3xxe37krm33" path="res://GUI/buttonTexture.tres" id="4_csy5u"]
 
 [sub_resource type="FontFile" id="1"]
@@ -36,7 +36,14 @@ color = Color(0, 0, 0, 0.298039)
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(224.5, 324)
 scale = Vector2(1.76172, 2.53906)
-texture = ExtResource("2")
+texture = ExtResource("2_csy5u")
+
+[node name="Score" type="Label" parent="."]
+offset_left = 164.0
+offset_top = 134.0
+offset_right = 320.0
+offset_bottom = 160.0
+text = "Votre score: "
 
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
@@ -47,15 +54,17 @@ offset_bottom = 39.0
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 0
-offset_right = 451.0
-offset_bottom = 40.0
+offset_left = 163.0
+offset_top = 24.0
+offset_right = 287.0
+offset_bottom = 64.0
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 2
-offset_left = 179.0
-offset_top = 12.0
-offset_right = 268.0
-offset_bottom = 31.0
+offset_left = 180.0
+offset_top = 36.0
+offset_right = 269.0
+offset_bottom = 55.0
 pivot_offset = Vector2(27, 58)
 theme_override_fonts/font = SubResource("1")
 text = "Fin de partie"
@@ -63,18 +72,18 @@ text = "Fin de partie"
 [node name="RestartButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 132.0
-offset_top = 325.0
+offset_top = 279.0
 offset_right = 324.0
-offset_bottom = 356.0
+offset_bottom = 310.0
 theme = ExtResource("4_csy5u")
 text = "Recommencer"
 
 [node name="ExitButton" type="Button" parent="."]
 layout_mode = 0
 offset_left = 132.0
-offset_top = 366.0
+offset_top = 328.0
 offset_right = 324.0
-offset_bottom = 397.0
+offset_bottom = 359.0
 text = "Quitter"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]

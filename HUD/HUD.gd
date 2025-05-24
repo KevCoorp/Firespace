@@ -1,15 +1,5 @@
-extends Control
+extends Control 
 
-@onready var scoreLabel := $Score
-
-var score: int = 0
-
-func _ready():
-	Signals.connect("on_score_increment", Callable(self, "_on_score_increment"))
-	
-func _on_score_increment(amount: int):
-	score += amount
-	scoreLabel.text = "Score %s" % [ score ]
-	
-
-	
+@onready var score = $MarginContainer/Score:
+	set(value):
+		score.text = "Score: " + str(value)

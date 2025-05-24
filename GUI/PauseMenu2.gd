@@ -15,6 +15,5 @@ func set_is_paused(value):
 func _on_ResumeBtn_pressed():
 	self.is_paused = false
 
-
 func _on_QuitBtn_pressed():
 	get_tree().quit()
