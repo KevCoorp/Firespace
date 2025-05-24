@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=3 uid="uid://bcqg7w13ok1qv"]
 
-[ext_resource type="Script" uid="uid://dmxs4ghpm5xno" path="res://GUI/PauseMenu2.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2_wv0hp"]
-[ext_resource type="FontFile" uid="uid://f85s4nj3ln3i" path="res://Fonts/Roboto-Regular.ttf" id="3"]
-[ext_resource type="Theme" uid="uid://bc3xxe37krm33" path="res://GUI/buttonTexture.tres" id="4_wv0hp"]
-[ext_resource type="Texture2D" uid="uid://g61k0xdd7a4v" path="res://Textures/logo.png" id="5_wv0hp"]
+[ext_resource type="Script" uid="uid://dmxs4ghpm5xno" path="res://GUI/PauseMenu.gd" id="1_kspis"]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2_abxvi"]
+[ext_resource type="Theme" uid="uid://bc3xxe37krm33" path="res://GUI/buttonTexture.tres" id="3_apdls"]
+[ext_resource type="FontFile" uid="uid://f85s4nj3ln3i" path="res://Fonts/Roboto-Regular.ttf" id="4_gortb"]
+[ext_resource type="Texture2D" uid="uid://g61k0xdd7a4v" path="res://Textures/logo.png" id="5_eh46i"]
 
 [sub_resource type="FontFile" id="1"]
-fallbacks = Array[Font]([ExtResource("3")])
+fallbacks = Array[Font]([ExtResource("4_gortb")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -18,7 +18,7 @@ cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
 [sub_resource type="FontFile" id="2"]
-fallbacks = Array[Font]([ExtResource("3")])
+fallbacks = Array[Font]([ExtResource("4_gortb")])
 subpixel_positioning = 0
 msdf_pixel_range = 14
 msdf_size = 128
@@ -28,7 +28,7 @@ cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
-[node name="PauseMenu2" type="Control"]
+[node name="PauseMenu" type="Control"]
 process_mode = 3
 layout_mode = 3
 anchors_preset = 15
@@ -36,12 +36,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("2")
+script = ExtResource("1_kspis")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -100
 scale = Vector2(1.75781, 2.53516)
-texture = ExtResource("2_wv0hp")
+texture = ExtResource("2_abxvi")
 centered = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -60,14 +60,14 @@ grow_vertical = 2
 
 [node name="ResumeBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_wv0hp")
+theme = ExtResource("3_apdls")
 theme_override_fonts/font = SubResource("1")
 text = "Reprendre"
 icon_alignment = 1
 
 [node name="QuitBtn" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme = ExtResource("4_wv0hp")
+theme = ExtResource("3_apdls")
 theme_override_fonts/font = SubResource("2")
 text = "Quitter"
 icon_alignment = 1
@@ -75,7 +75,7 @@ icon_alignment = 1
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(223, 185)
 scale = Vector2(0.941011, 0.941011)
-texture = ExtResource("5_wv0hp")
+texture = ExtResource("5_eh46i")
 
 [connection signal="pressed" from="VBoxContainer/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]

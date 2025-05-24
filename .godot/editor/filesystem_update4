@@ -11,3 +11,9 @@ res://Enemy/Enemy.gd
 res://Bullet/EnemyBullet.gd
 res://Scripts/game_over.gd
 res://Bullet/Bullet.gd
+res://Enemy/Enemy.tscn
+res://GUI/PauseMenu.tscn
+res://Bullet/EnemyBullet.tscn
+res://Enemy/FastEnemy.tscn
+res://Enemy/SlowShooter.gd
+res://MainScenes/Main.gd

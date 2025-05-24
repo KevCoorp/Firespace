@@ -16,8 +16,6 @@ var vel := Vector2(0, 0)
 @export var fireDelay: float = 0.1 # Délai de tir
 @export var damageInvincibilityTime := 0.5 # Domage du temps de l'invicibilité 
 
-
-
 func _ready():
 	shieldSprite.visible = false
 

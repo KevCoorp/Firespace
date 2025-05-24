@@ -6,8 +6,6 @@
 
 [node name="FastEnemy" instance=ExtResource("1")]
 script = ExtResource("3")
-verticalSpeed = 95
-health = 7
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2")

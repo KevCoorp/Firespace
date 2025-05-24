@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://criqqucemvo5s"]
 
-[ext_resource type="PackedScene" uid="uid://bcqg7w13ok1qv" path="res://GUI/PauseMenu2.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://bcqg7w13ok1qv" path="res://GUI/PauseMenu.tscn" id="1"]
 
 [node name="GUI" type="CanvasLayer"]
 

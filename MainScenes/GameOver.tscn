@@ -45,6 +45,23 @@ offset_right = 320.0
 offset_bottom = 160.0
 text = "Votre score: "
 
+[node name="RestartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 279.0
+offset_right = 324.0
+offset_bottom = 310.0
+theme = ExtResource("4_csy5u")
+text = "Recommencer"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 328.0
+offset_right = 324.0
+offset_bottom = 359.0
+text = "Quitter"
+
 [node name="Control" type="Control" parent="."]
 anchors_preset = 0
 offset_left = -1.0
@@ -68,23 +85,6 @@ offset_bottom = 55.0
 pivot_offset = Vector2(27, 58)
 theme_override_fonts/font = SubResource("1")
 text = "Fin de partie"
-
-[node name="RestartButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 279.0
-offset_right = 324.0
-offset_bottom = 310.0
-theme = ExtResource("4_csy5u")
-text = "Recommencer"
-
-[node name="ExitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 132.0
-offset_top = 328.0
-offset_right = 324.0
-offset_bottom = 359.0
-text = "Quitter"
 
 [connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

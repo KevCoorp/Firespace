@@ -6,8 +6,6 @@ extends "res://Enemy/Enemy.gd"
 
 func _process(delta):
 	if fireTimer.is_stopped():
-		fire()
 		fireTimer.start(fireRate)
 	
 	
-

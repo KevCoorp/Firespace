@@ -1,10 +1,12 @@
 extends Area2D
 class_name Enemy
 
-@export var verticalSpeed := 10
-@export var health: int = 5
+signal enemy_died(points: int)  # Signal emitted when the enemy dies
 
-var plBullet := preload("res://Bullet/EnemyBullet.tscn")
+@export var verticalSpeed := 100
+@export var health: int = 3
+@export var points := 50
+
 var playerInArea: Player = null
 
 func _process(delta):
@@ -13,11 +15,6 @@ func _process(delta):
 
 func _physics_process(delta):
 	position.y += verticalSpeed * delta
-	
-func fire():
-	var bullet := plBullet.instantiate()
-	bullet.position = position
-	get_tree().current_scene.add_child(bullet)
 
 func damage(amount: int):
 	if health <= 0:
@@ -25,8 +22,7 @@ func damage(amount: int):
 	
 	health -= amount
 	if health <= 0:
-	
-		Signals.emit_signal("on_score_increment", 1)	
+		emit_signal("enemy_died", points)  # Emit signal with points before dying
 		queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
