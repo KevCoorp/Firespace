@@ -1,13 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://dirss3fcy6n0"]
 
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Textures/ennemy_2.png" type="Texture2D" id=2]
-[ext_resource path="res://Enemy/FastEnemy.gd" type="Script" id=3]
+[ext_resource type="PackedScene" uid="uid://bp2g5bmcf1gtr" path="res://Enemy/Enemy.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dkb2wlqk0xwb6" path="res://Textures/ennemy_2.png" id="2"]
+[ext_resource type="Script" uid="uid://c474c38b4sii2" path="res://Enemy/FastEnemy.gd" id="3"]
 
-[node name="FastEnemy" instance=ExtResource( 1 )]
-script = ExtResource( 3 )
+[node name="FastEnemy" instance=ExtResource("1")]
+script = ExtResource("3")
 verticalSpeed = 95
 health = 7
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource( 2 )
+texture = ExtResource("2")

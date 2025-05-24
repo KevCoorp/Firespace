@@ -1,90 +1,81 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=8 format=3 uid="uid://bcqg7w13ok1qv"]
 
-[ext_resource path="res://Textures/background.png" type="Texture2D" id=1]
-[ext_resource path="res://GUI/PauseMenu2.gd" type="Script" id=2]
-[ext_resource path="res://Fonts/Roboto-Regular.ttf" type="FontFile" id=3]
-[ext_resource path="res://Textures/ship.png" type="Texture2D" id=4]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://background.png" id="1"]
+[ext_resource type="Script" uid="uid://dmxs4ghpm5xno" path="res://GUI/PauseMenu2.gd" id="2"]
+[ext_resource type="FontFile" uid="uid://f85s4nj3ln3i" path="res://Fonts/Roboto-Regular.ttf" id="3"]
+[ext_resource type="Theme" uid="uid://bc3xxe37krm33" path="res://GUI/buttonTexture.tres" id="4_wv0hp"]
+[ext_resource type="Texture2D" uid="uid://g61k0xdd7a4v" path="res://Textures/logo.png" id="5_wv0hp"]
 
-[sub_resource type="FontFile" id=3]
-font_path = "res://Fonts/Roboto-Bold.ttf"
+[sub_resource type="FontFile" id="1"]
+fallbacks = Array[Font]([ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
-[sub_resource type="FontFile" id=4]
-size = 25
-font_data = SubResource( 3 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.152941, 0.133333, 0.415686, 1 )
-border_width_bottom = 2
-border_color = Color( 0.0156863, 0.0313726, 0.141176, 1 )
-
-[sub_resource type="Theme" id=6]
-Button/colors/font_color = Color( 1, 1, 1, 1 )
-Button/styles/normal = SubResource( 5 )
-
-[sub_resource type="FontFile" id=1]
-font_data = ExtResource( 3 )
-
-[sub_resource type="FontFile" id=2]
-font_data = ExtResource( 3 )
+[sub_resource type="FontFile" id="2"]
+fallbacks = Array[Font]([ExtResource("3")])
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
 
 [node name="PauseMenu2" type="Control"]
 process_mode = 3
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
-
-[node name="Ship" type="Sprite2D" parent="."]
-position = Vector2( 167, 143 )
-rotation = 0.397213
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
-
-[node name="Label" type="Label" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -49.0
-offset_top = 125.0
-offset_right = 60.0
-offset_bottom = 154.0
-theme_override_fonts/font = SubResource( 4 )
-text = "FireSpace"
-align = 1
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
 
 [node name="Background" type="Sprite2D" parent="."]
-scale = Vector2( 1.75781, 2.34375 )
 z_index = -100
-texture = ExtResource( 1 )
+scale = Vector2(1.75781, 2.53516)
+texture = ExtResource("1")
 centered = false
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 2.0
-offset_bottom = 2.0
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -23.0
+offset_right = 50.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
-offset_left = 189.0
-offset_top = 275.0
-offset_right = 260.0
-offset_bottom = 325.0
-
-[node name="ResumeBtn" type="Button" parent="CenterContainer/VBoxContainer"]
-offset_right = 71.0
-offset_bottom = 21.0
-theme = SubResource( 6 )
-theme_override_fonts/font = SubResource( 1 )
+[node name="ResumeBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_wv0hp")
+theme_override_fonts/font = SubResource("1")
 text = "Reprendre"
 icon_alignment = 1
 
-[node name="QuitBtn" type="Button" parent="CenterContainer/VBoxContainer"]
-offset_top = 25.0
-offset_right = 71.0
-offset_bottom = 50.0
-theme_override_fonts/font = SubResource( 2 )
+[node name="QuitBtn" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("4_wv0hp")
+theme_override_fonts/font = SubResource("2")
 text = "Quitter"
 icon_alignment = 1
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(223, 185)
+scale = Vector2(0.941011, 0.941011)
+texture = ExtResource("5_wv0hp")
+
+[connection signal="pressed" from="VBoxContainer/ResumeBtn" to="." method="_on_ResumeBtn_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitBtn" to="." method="_on_QuitBtn_pressed"]

@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://2bqd3jqabyjx"]
 
-[ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Textures/ennemy_3.png" type="Texture2D" id=2]
-[ext_resource path="res://Enemy/SlowShooter.gd" type="Script" id=3]
+[ext_resource type="PackedScene" uid="uid://bp2g5bmcf1gtr" path="res://Enemy/Enemy.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://dkvibs4oq84e4" path="res://Textures/ennemy_3.png" id="2"]
+[ext_resource type="Script" uid="uid://b2x62s68id6qk" path="res://Enemy/SlowShooter.gd" id="3"]
 
-[node name="SlowShooter" instance=ExtResource( 1 )]
-script = ExtResource( 3 )
+[node name="SlowShooter" instance=ExtResource("1")]
+script = ExtResource("3")
 verticalSpeed = 30
 health = 5
 fireRate = 2.5
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource( 2 )
+texture = ExtResource("2")
 
 [node name="FireTimer" type="Timer" parent="." index="3"]
 one_shot = true

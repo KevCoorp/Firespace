@@ -64,7 +64,6 @@ func damage(amount: int):
 	print("Player Life = %s" % life)
 	
 	var camera := get_tree().current_scene.find_child("Camera3D", true, false)
-	camera.shake(10)
 		
 	if life <= 0:
 		get_tree().change_scene_to_file("res://MainScenes/GameOver.tscn")

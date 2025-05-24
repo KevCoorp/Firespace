@@ -1,31 +1,30 @@
 [gd_scene load_steps=8 format=3 uid="uid://cw67g6hd1vsn1"]
 
-[ext_resource type="PackedScene" path="res://Player/Player.tscn" id="1"]
-[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2"]
-[ext_resource type="Script" path="res://Enemy/Spawner.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://duvfj462hwsg6" path="res://Player/Player.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://background.png" id="2"]
+[ext_resource type="Script" uid="uid://bn00cciv8yi8c" path="res://Enemy/Spawner.gd" id="3"]
 [ext_resource type="PackedScene" uid="uid://2saq6ysd1tq" path="res://HUD/HUD.tscn" id="4"]
-[ext_resource type="PackedScene" path="res://GUI/GUI.tscn" id="6"]
-[ext_resource type="Script" path="res://MainScenes/Main.gd" id="7"]
+[ext_resource type="PackedScene" uid="uid://criqqucemvo5s" path="res://GUI/GUI.tscn" id="6"]
+[ext_resource type="Script" uid="uid://b4doqt3rs7qxn" path="res://MainScenes/Main.gd" id="7"]
 [ext_resource type="AudioStream" uid="uid://cb04rlo8ljxag" path="res://Audio/theme.ogg" id="8"]
 
 [node name="Gameplay" type="Node2D"]
 script = ExtResource("7")
 
 [node name="Background" type="Sprite2D" parent="."]
-z_index = -100
-scale = Vector2(1.75781, 2.53125)
+position = Vector2(224.5, 323.5)
+scale = Vector2(1.75037, 2.53516)
 texture = ExtResource("2")
-centered = false
 
 [node name="GUI" parent="." instance=ExtResource("6")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HUD" parent="CanvasLayer" instance=ExtResource("4")]
-layout_mode = 3
-anchors_preset = 5
-offset_left = -225.0
-offset_right = 225.0
+offset_left = 57.0
+offset_top = 11.0
+offset_right = 72.0
+offset_bottom = 51.0
 
 [node name="Player" parent="." instance=ExtResource("1")]
 position = Vector2(226, 472)
