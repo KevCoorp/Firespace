@@ -17,9 +17,9 @@ texture = ExtResource("2_l63sq")
 
 [node name="GUI" parent="." instance=ExtResource("6")]
 
-[node name="UI" type="CanvasLayer" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="HUD" parent="UI" instance=ExtResource("4")]
+[node name="HUD" parent="CanvasLayer" instance=ExtResource("4")]
 offset_left = 57.0
 offset_top = 11.0
 offset_right = 72.0
@@ -29,6 +29,7 @@ offset_bottom = 51.0
 position = Vector2(226, 472)
 
 [node name="Spawner" type="Node2D" parent="."]
+position = Vector2(216, -65)
 script = ExtResource("3")
 
 [node name="SpawnTimer" type="Timer" parent="Spawner"]
@@ -43,5 +44,5 @@ wait_time = 10.0
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 
 [connection signal="timeout" from="Spawner/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
-[connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_SpawnTimer_timeout"]
 [connection signal="timeout" from="DifficultyTimer" to="." method="_on_DifficultyTimer_timeout"]

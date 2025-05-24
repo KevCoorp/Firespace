@@ -12,12 +12,15 @@ var preloadedEnemies := [
 
 var nextSpawnTime := 2
 
+var player = null
+
+
 func _ready():
 	randomize()
 	spawnTimer.start(nextSpawnTime)
 
 
-func _on_SpawnTimer_timeout():
+func _on_spawn_timer_timeout():
 	var viewRect := get_viewport_rect()
 	var xPos := randf_range(viewRect.position.x, viewRect.end.x)
 	
@@ -27,6 +30,7 @@ func _on_SpawnTimer_timeout():
 		var enemyPreload = preloadedEnemies[randi() % preloadedEnemies.size()]
 		var enemy = enemyPreload.instantiate()
 		enemy.position = Vector2(xPos, position.y)
+		
 		get_tree().current_scene.add_child(enemy)
 	
 	nextSpawnTime -= 0.1

@@ -1,5 +1,5 @@
 extends Area2D
-signal killed(points)
+signal enemy_killed
 
 @export var verticalSpeed := 10
 @export var health: int = 3
@@ -21,6 +21,7 @@ func damage(amount: int):
 	health -= amount
 	if health <= 0:
 		queue_free()
+		
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()

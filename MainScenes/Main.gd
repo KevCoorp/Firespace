@@ -1,22 +1,26 @@
 extends Node2D
 
-@onready var hud = $CanvasLayer/HUD
-@onready var game_over_screen = $GameOver
+@onready var hud = $UI/HUD
 
 var score := 0:
 	set(value):
 		score = value
-		hud.update_score(score)  # Call a method in HUD to update the display
+		hud.score = score
 
 func _ready():
-	score = 0  # Initialize score
-	# Connect enemy signals (if enemies are spawned dynamically)
+	hud.score = 0
+	
+func _on_spawn_timer_timeout():
+	var new_enemy = preload("res://Enemy/Enemy.tscn").instantiate()
+	add_child(new_enemy)
+	
+	# Connect the signal when enemy is spawned
+	new_enemy.killed.connect(_on_enemy_killed)
+	
+	
+func _on_enemy_killed():
+	score += 1
+	$Spawner/SpawnTimer.wait_time = 1.5
 
-# Call this when an enemy dies
-func _on_enemy_killed(points: int):
-	score += points
 
-# Call this when the player dies
-func _on_player_death():
-	game_over_screen.set_score(score)
-	game_over_screen.visible = true
+	

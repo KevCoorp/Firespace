@@ -1,7 +1,6 @@
 extends Area2D
 class_name Player
 
-
 # Variable
 var plBullet := preload("res://Bullet/Bullet.tscn")
 var vel := Vector2(0, 0)
@@ -39,16 +38,12 @@ func _physics_process(delta):
 	elif Input.is_action_pressed("move_down"):
 		dirVec.y = 1 
 		
-
-	
-
 	vel = dirVec.normalized() * speed
 	position += vel * delta
 	
 	var viewRect := get_viewport_rect()
 	position.x = clamp(position.x, 0, viewRect.size.x)
 	position.y = clamp(position.y, 0, viewRect.size.y)
-
 
 # Si le joueur est touché
 func damage(amount: int):
