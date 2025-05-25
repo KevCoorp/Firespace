@@ -4,7 +4,7 @@
 
 :gear: - Les outils utiliser lors du développement de ce jeu sont:
 
-- Godot Engine 3.5 (Moteur de jeu)
+- Godot Engine 4.4 (Moteur de jeu)
 - Paint.NET (Sprites, Background,...)
 
 :wrench: - Configuration requise
@@ -17,4 +17,4 @@ Musique de fond:
 
 - https://freesound.org/s/610504/
 
-KevCorp® 2024
+© KevCorp, 2025 
