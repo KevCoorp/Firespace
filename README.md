@@ -7,10 +7,9 @@
 - Godot Engine 4.4 (Moteur de jeu)
 - Paint.NET (Sprites, Background,...)
 
-:wrench: - Configuration requise
-
+:wrench: - Configuration minimale
 - Un ordinateur sous Windows ou Linux 
-- Uniquement en version 64
+- Un processeur qui supporte le x64
 
 🖌️ - Ressources
 Musique de fond:
