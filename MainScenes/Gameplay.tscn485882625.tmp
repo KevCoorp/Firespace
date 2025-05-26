@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://cw67g6hd1vsn1"]
+
+[ext_resource type="PackedScene" uid="uid://duvfj462hwsg6" path="res://Player/Player.tscn" id="1"]
+[ext_resource type="Texture2D" uid="uid://yogvt563gla1" path="res://Textures/background.png" id="2_l63sq"]
+[ext_resource type="Script" uid="uid://bn00cciv8yi8c" path="res://Enemy/Spawner.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://2saq6ysd1tq" path="res://HUD/HUD.tscn" id="4"]
+[ext_resource type="PackedScene" uid="uid://criqqucemvo5s" path="res://GUI/GUI.tscn" id="6"]
+[ext_resource type="Script" uid="uid://b4doqt3rs7qxn" path="res://MainScenes/Main.gd" id="7"]
+
+[node name="Gameplay" type="Node2D"]
+script = ExtResource("7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(225, 323.5)
+scale = Vector2(1.75781, 2.53516)
+texture = ExtResource("2_l63sq")
+
+[node name="GUI" parent="." instance=ExtResource("6")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="UI" instance=ExtResource("4")]
+offset_left = 57.0
+offset_top = 11.0
+offset_right = 72.0
+offset_bottom = 51.0
+
+[node name="Player" parent="." instance=ExtResource("1")]
+position = Vector2(226, 472)
+
+[node name="Spawner" type="Node2D" parent="."]
+script = ExtResource("3")
+
+[node name="SpawnTimer" type="Timer" parent="Spawner"]
+one_shot = true
+
+[node name="Camera3D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="DifficultyTimer" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="timeout" from="Spawner/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="Spawner/SpawnTimer" to="Spawner" method="_on_spawn_timer_timeout"]
+[connection signal="timeout" from="DifficultyTimer" to="." method="_on_DifficultyTimer_timeout"]

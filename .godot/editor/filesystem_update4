@@ -5,9 +5,6 @@ res://Enemy/Enemy.tscn
 res://Enemy/FastEnemy.tscn
 res://Bullet/EnemyBullet.tscn
 res://MainScenes/Gameplay.tscn
-res://Enemy/Enemy.gd
-res://MainScenes/Main.gd
-res://Enemy/Spawner.gd
 res://GUI/MainMenu.tscn
-res://HUD/HUD.gd
-res://Autoloads/Signals.gd
+res://Enemy/Spawner.gd
+res://MainScenes/Main.gd

@@ -17,7 +17,6 @@ func _on_spawn_timer_timeout():
 	# Connect the signal when enemy is spawned
 	new_enemy.killed.connect(_on_enemy_killed)
 	
-	
 func _on_enemy_killed():
 	score += 1
 	$Spawner/SpawnTimer.wait_time = 1.5
