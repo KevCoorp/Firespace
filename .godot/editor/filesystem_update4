@@ -6,5 +6,3 @@ res://Enemy/FastEnemy.tscn
 res://Bullet/EnemyBullet.tscn
 res://MainScenes/Gameplay.tscn
 res://GUI/MainMenu.tscn
-res://Enemy/Spawner.gd
-res://MainScenes/Main.gd
